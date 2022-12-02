@@ -1,0 +1,33 @@
+.container {
+  background: transparent;
+}
+.content {
+  margin: 64px;
+
+}
+.back{
+    margin-left: 48px;
+    font-size:21px;
+    color: rgb(5, 143, 197) !important;
+}
+h3{
+    font-size: 38px !important;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  margin: 44px;
+}
+
+.img {
+  width: 390px;
+  height: 295px;
+  border-radius: 5px;
+}
+.line{
+    height: 1px;
+    background-color: rgba(128, 128, 128, 0.13);
+    width: 100%;
+    margin-top: 3px;
+}

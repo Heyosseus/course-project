@@ -1,0 +1,38 @@
+.container{
+    margin: 44px;
+    display: flex;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    margin-top: 62px;
+    width: 580px;
+}
+form{
+    display: flex;
+    margin-top: 16px;
+}
+input{
+    width: 400px;
+    margin-left: auto !important;
+    border: 1px solid black;
+    border-radius: 4px;
+    height: 32px;
+}
+input:active,
+input:focus,
+input:hover{
+    border: 2px solid  rgb(7, 118, 161);
+    outline: none;
+}
+
+.buttons{
+    margin-top: 16px;
+    justify-content: flex-end;
+    align-items: center;
+    display: flex;
+}
+button{
+    margin-left: 6px !important;
+}

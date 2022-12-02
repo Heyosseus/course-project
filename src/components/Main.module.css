@@ -1,0 +1,24 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    background: #f2f2f298;
+}
+.line{
+    height: 1px;
+    background-color: rgba(128, 128, 128, 0.13);
+    width: 100%;
+    margin-top: 3px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin: 44px;
+}
+.tableContainer{
+    margin: 0 44px;
+}
+
+tbody:nth-child(even) {
+  background-color: white !important;
+}
