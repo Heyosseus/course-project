@@ -1,0 +1,33 @@
+.container{
+    margin: 44px;
+    justify-content: center;
+    align-items: center; 
+    display: flex;
+    text-align: center;
+}
+
+.paragraph{
+    font-size: 32px;
+    background: rgba(255, 5, 5, 0.36);
+    width: 750px;
+    align-items: center;
+    display: inline-flex;
+    height: 70px;
+    color:rgba(125, 6, 6, 0.788) ;
+    font-weight: 500;
+    margin-top: 12px;
+    border-radius: 5px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+p{
+    margin-left: 12px;
+    font-size: 20px;
+}
+label{
+    font-weight: bold;
+}

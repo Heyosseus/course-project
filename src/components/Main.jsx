@@ -1,20 +1,27 @@
-import React from 'react';
-import main from './Main.module.css';
-import Edit from '../pages/edit/Edit';
-import { useState } from 'react';
+import React from "react";
+import main from "./Main.module.css";
+import Edit from "../pages/edit/Edit";
+import { useState } from "react";
+import ShowFilter from "./ShowFilter";
 
+const Main = () => {
+  
 
-const Main = ({ isVisible, setIsVisible }) => {
-  const displayHandler = () => {
-    setIsVisible(!isVisible)
+  const [show, setShow] = useState(true);
+  const showBtn = () => {
+    setShow(!show);
   };
+
   return (
     <div className={main.container}>
       <div className={main.line}></div>
       <div className={main.header}>
         <h2>Products</h2>
-        <button className="btn btn-light border">Show filter</button>
+        <button className="btn btn-light border" onClick={showBtn}>
+          {show ? "Show filter" : "Hide filter"}
+        </button>
       </div>
+      {show ? "" : <ShowFilter />}
       <div className={main.tableContainer}>
         <table className="table table-bordered table-striped">
           <thead>
@@ -35,18 +42,14 @@ const Main = ({ isVisible, setIsVisible }) => {
               <td>900.00</td>
               <td>11 January 2021</td>
               <td>
-                <button
-                  className="btn btn-secondary"
-                  onCliCk={displayHandler}
-                >
-                  Edit
-                </button>
-                <button
-                  style={{ marginLeft: 8 }}
-                  className="btn btn-danger"
-                >
-                  Delete
-                </button>
+                <a href="/edit">
+                  <button className="btn btn-secondary">Edit</button>
+                </a>
+                <a href="/delete">
+                  <button style={{ marginLeft: 8 }} className="btn btn-danger">
+                    Delete
+                  </button>
+                </a>
               </td>
             </tr>
           </tbody>
@@ -58,13 +61,15 @@ const Main = ({ isVisible, setIsVisible }) => {
               <td>1,431.50</td>
               <td>06 August 2021</td>
               <td>
-                <button className="btn btn-secondary">Edit</button>
-                <button
-                  style={{ marginLeft: 8 }}
-                  className="btn btn-danger"
-                >
-                  Delete
-                </button>
+                <a href="/edit">
+                  <button className="btn btn-secondary">Edit</button>
+                </a>
+
+                <a href="/delete">
+                  <button style={{ marginLeft: 8 }} className="btn btn-danger">
+                    Delete
+                  </button>
+                </a>
               </td>
             </tr>
           </tbody>
@@ -76,13 +81,14 @@ const Main = ({ isVisible, setIsVisible }) => {
               <td>1,431.50</td>
               <td>09 November 2021</td>
               <td>
-                <button className="btn btn-secondary">Edit</button>
-                <button
-                  style={{ marginLeft: 8 }}
-                  className="btn btn-danger"
-                >
-                  Delete
-                </button>
+                <a href="/edit">
+                  <button className="btn btn-secondary">Edit</button>
+                </a>
+                <a href="/delete">
+                  <button style={{ marginLeft: 8 }} className="btn btn-danger">
+                    Delete
+                  </button>
+                </a>
               </td>
             </tr>
           </tbody>
@@ -94,20 +100,21 @@ const Main = ({ isVisible, setIsVisible }) => {
               <td>1,431.50</td>
               <td>09 November 2021</td>
               <td>
-                <button className="btn btn-secondary">Edit</button>
-                <button
-                  style={{ marginLeft: 8 }}
-                  className="btn btn-danger"
-                >
-                  Delete
-                </button>
+                <a href="/edit">
+                  <button className="btn btn-secondary">Edit</button>
+                </a>
+                <a href="/delete">
+                  <button style={{ marginLeft: 8 }} className="btn btn-danger">
+                    Delete
+                  </button>
+                </a>
               </td>
             </tr>
           </tbody>
         </table>
-        <button className="btn btn-primary">
-          Create New Product
-        </button>
+        <a href="/create">
+          <button className="btn btn-primary">Create New Product</button>
+        </a>
       </div>
     </div>
   );

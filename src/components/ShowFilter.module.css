@@ -1,0 +1,23 @@
+.container{
+    display: flex;
+    margin-bottom: 16px;
+}
+
+form{
+    margin: 8px  44px;
+    font-size: 18px;
+}
+
+.input{
+    width: 130px;
+    margin-right: 4px;
+}
+
+#first{
+    width: 180px;
+}
+#btn{
+    width: 90px;
+    height: 40px;
+    margin-top: 10px;
+}
