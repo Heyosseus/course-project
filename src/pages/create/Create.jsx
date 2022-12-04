@@ -40,7 +40,11 @@ const Create = () => {
             </form>
             <form action="">
               <label htmlFor="">sell Start Date:</label>
-              <input type="datetime-local" />
+              <input
+                type="datetime-local"
+                name="partydate"
+                value="2022-12-03T08:30"
+              />
             </form>
             <div className={create.buttons}>
               <button className="btn btn-success">Save</button>

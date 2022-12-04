@@ -1,7 +1,15 @@
 import React from "react";
 import { Header } from "../../App";
 import Delete from "./Delete.module.css";
+import { data } from "../../components/Main";
+import { useState } from "react";
 const DeletePage = () => {
+  const [list, setList] = useState(data);
+  function handleRemove(id) {
+    const newList = list.filter((item) => item.id !== id);
+
+    setList(newList);
+  }
   return (
     <div>
 
@@ -17,7 +25,7 @@ const DeletePage = () => {
         <div>
           <form action="">
             <label htmlFor="">ProductId:</label>
-            <p>680</p>
+            <p></p>
           </form>
           <form>
             <label htmlFor="">Name:</label>
@@ -52,7 +60,7 @@ const DeletePage = () => {
             <p></p>
           </form>
         </div>
-        <button className="btn btn-danger" style={{ marginTop: 12 }}>
+        <button className="btn btn-danger" style={{ marginTop: 12 }} onClick={()=>handleRemove(list.id)}>
           Delete the Product!
         </button>
         <a href="/">

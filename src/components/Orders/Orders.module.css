@@ -1,8 +1,12 @@
 .container {
   background: transparent;
+
 }
 .content {
   margin: 64px;
+  display: flex;
+  justify-content: center;
+  
 
 }
 .back{
@@ -12,6 +16,9 @@
 }
 h3{
     font-size: 38px !important;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 .main {

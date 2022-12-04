@@ -3,7 +3,8 @@
 }
 .content {
   margin: 64px;
-
+  display: flex;
+  justify-content: center;
 }
 .back{
     margin-left: 48px;
