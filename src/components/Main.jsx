@@ -3,6 +3,13 @@ import main from "./Main.module.css";
 import Edit from "../pages/edit/Edit";
 import { useState } from "react";
 import ShowFilter from "./ShowFilter";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+} from 'react-router-dom';
+
 
 export const data = [
   {
@@ -78,7 +85,7 @@ const Main = () => {
   };
   
  const [list, setList] = useState(data);
-
+  console.log(list.id)
   return (
     <div className={main.container}>
       <div className={main.line}></div>
@@ -110,10 +117,10 @@ const Main = () => {
                 <td>{item.ListPrice}</td>
                 <td>{item.ModifiedDate}</td>
                 <td>
-                  <a href="/edit">
+                  <Link to="/edit">
                     <button className="btn btn-secondary">Edit</button>
-                  </a>
-                  <a href="/delete">
+                  </Link>
+                  <Link to="/delete">
                     <button
                       style={{ marginLeft: 8 }}
                       className="btn btn-danger"
@@ -121,15 +128,15 @@ const Main = () => {
                     >
                       Delete
                     </button>
-                  </a>
+                  </Link>
                 </td>
               </tr>
             </tbody>
           ))}
         </table>
-        <a href="/create">
+        <Link to="/create">
           <button className="btn btn-primary">Create New Product</button>
-        </a>
+        </Link>
       </div>
     </div>
   );

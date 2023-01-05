@@ -38,7 +38,7 @@ li{
 }
 
 .footer{
-  position: absolute;
+  position: static;
   bottom: 0;
   margin: 44px;
 }
